@@ -15,16 +15,22 @@ import authRoutes from './routes/auth.js'
 // create express app
 const app = express()
 
+app.set('trust proxy', 1)
+
 app.use(session({
     secret: 'codepath',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: {
+        sameSite: 'none',
+        secure: true
+    }
  }))
 
 // middleware
 app.use(express.json())
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://client-7m8x.onrender.com',
     methods: 'GET,POST,PUT,DELETE,PATCH',
     credentials: true
   }
