@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /Users/abha/Desktop/web103-lab7-exemplar/server && ls -la && cat config/database.js 2>/dev/null || find . -name \"database.js\" -not -path \"*/node_modules/*\"; cat .env; cat package.json; cat .gitignore ../.gitignore 2>/dev/null)",
+      "Read(//Users/abha/Desktop/**)",
+      "Bash(git check-ignore *)"
+    ]
+  }
+}
